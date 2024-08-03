@@ -43,8 +43,9 @@ Most of the code of our backbone are borrowed from [AGW](https://github.com/mang
 Thanks a lot for the author's contribution.
 
 Please cite the following paper in your publications if it is helpful:
-'''
-'''
+
+```
+```
 
 ## References.
 [1] D. T. Nguyen, H. G. Hong, K. W. Kim, and K. R. Park. Person recognition system based on a combination of body images from visible light and thermal cameras. Sensors, 17(3):605, 2017.
