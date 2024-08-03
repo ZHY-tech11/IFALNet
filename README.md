@@ -1,5 +1,5 @@
 # IFALNet
-Pytorch code for paper "Middle modality interactive feature attention learning for Visible-Infrared Person Re-Identification"
+Pytorch code for paper "**Middle modality interactive feature attention learning for Visible-Infrared Person Re-Identification**"
 
 ## Results
 | Datasets   | Rank@1   | mAP   |
@@ -17,6 +17,25 @@ The results may have some fluctuation, and fine-tuning hyperparameters may yield
   * You need to run `python process_sysu.py` to pepare the dataset, the training data will be stored in ".npy" format.
 
 * LLCM [3]: The LLCM dataset can be downloaded from this [website](https://github.com/ZYK100/LLCM).
+
+## Training
+**Train IFALNet by**
+```
+python train.py --dataset sysu --gpu 0
+```
+* `--dataset`: which dataset "sysu", "regdb" or "llcm".
+* `--gpu`: which gpu to run.
+
+## Testing
+**Test a model by**
+```
+python test.py --dataset 'sysu' --mode 'all' --resume 'model_path' --tvsearch True --gpu 0 
+```
+* `--dataset`: which dataset "sysu", "regdb" or "llcm".
+* `--mode`: "all" or "indoor" (only for sysu dataset).
+* `--resume`: the saved model path.
+* `--tvsearch`: whether thermal to visible search True or False (only for regdb dataset).
+* `--gpu`: which gpu to use.
 
 ## References.
 [1] D. T. Nguyen, H. G. Hong, K. W. Kim, and K. R. Park. Person recognition system based on a combination of body images from visible light and thermal cameras. Sensors, 17(3):605, 2017.
